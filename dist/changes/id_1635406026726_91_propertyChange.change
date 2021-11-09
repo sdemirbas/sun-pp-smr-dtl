@@ -1,0 +1,43 @@
+{
+	"fileName": "id_1635406026726_91_propertyChange",
+	"fileType": "change",
+	"changeType": "propertyChange",
+	"moduleName": "",
+	"reference": "com.sun.pp.samplesummarydetail.Component",
+	"packageName": "$TMP",
+	"content": {
+		"property": "selectionMode",
+		"newValue": "Multi"
+	},
+	"selector": {
+		"id": "com.sun.pp.samplesummarydetail::sap.suite.ui.generic.template.ListReport.view.ListReport::DetailSet--GridTable",
+		"type": "sap.ui.table.Table",
+		"idIsLocal": false
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/com.sun.pp.samplesummarydetail/changes/",
+	"projectId": "com.sun.pp.samplesummarydetail",
+	"creation": "2021-10-28T07:27:07.540Z",
+	"originalLanguage": "EN",
+	"conditions": {},
+	"context": "",
+	"support": {
+		"generator": "Change.createInitialFileContent",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.71.38",
+		"sourceChangeFileName": "",
+		"compositeCommand": ""
+	},
+	"oDataInformation": {},
+	"dependentSelector": {},
+	"validAppVersions": {
+		"creation": "1.0.0",
+		"from": "1.0.0",
+		"to": "1.0.0"
+	},
+	"jsOnly": false,
+	"variantReference": "",
+	"appDescriptorChange": false
+}
