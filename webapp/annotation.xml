@@ -1,0 +1,294 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference Uri="/sap/opu/odata/sap/ZPP_014_NTF_SRV/$metadata">
+		<edmx:Include Alias="Metadata" Namespace="ZPP_014_NTF_SRV"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470968/UI.xml?api=v2">
+		<edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470974/Common.xml?api=v2">
+		<edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+	</edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="samplesummarydetail.annotation.ZPP_014_NTF_SRV">
+			<Annotations Target="Metadata.Detail">
+				<Annotation Term="UI.SelectionFields">
+					<Collection>
+						<PropertyPath>NtfNo</PropertyPath>
+						<PropertyPath>Beden</PropertyPath>
+						<PropertyPath>Iptal</PropertyPath>
+						<PropertyPath>ModelNo</PropertyPath>
+						<PropertyPath>Musteri</PropertyPath>
+						<PropertyPath>NumuneDurumu</PropertyPath>
+						<PropertyPath>TalepTarihi</PropertyPath>
+						<PropertyPath>Varyant</PropertyPath>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NtfNo"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="MusteriT"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;customer}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ModelT"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;model}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="VaryantT"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;variant}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="BedenT"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;size}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="KullaniciT"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;recordUser}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="TalepTarihi"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;requestDate}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="TalepEdilenAdet"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;requiredSampleNumber}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="TeslimAlinanAdet"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;receivedNumber}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Barkod"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;barcodeNo}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="OkutulanBarkodT"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;scannedBarcode}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumuneDurumuT"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;sampleStatu}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="OkutmaSaati"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;scannedTime}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CevrimSure"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;cycleTime}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Hikod"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;errorImprovementCode}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Hisebep"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;errorImprovementCause}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Hitip"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;errorImprovementType}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Departman"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;department}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Operasyon"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;operation}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="IptalNedeni"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;cause}"/>
+						</Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="Metadata.Detail/Beden">
+				<Annotation Term="Common.Label" String="{@i18n&gt;size}"/>
+				<Annotation Term="Common.ValueList">
+					<Record Type="Common.ValueListType">
+						<PropertyValue Property="CollectionPath" String="SizeVHSet"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="Common.ValueListParameterInOut">
+									<PropertyValue Property="ValueListProperty" String="Beden"/>
+									<PropertyValue Property="LocalDataProperty" PropertyPath="Beden"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="BedenT"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="Metadata.Detail/Iptal">
+				<Annotation Term="Common.Label" String="{@i18n&gt;cause}"/>
+				<Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
+				<Annotation Term="Common.FilterDefaultValue" String="T"/>
+				<Annotation Term="Common.ValueList">
+					<Record Type="Common.ValueListType">
+						<PropertyValue Property="CollectionPath" String="CauseVHSet"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="Common.ValueListParameterInOut">
+									<PropertyValue Property="LocalDataProperty" PropertyPath="Iptal"/>
+									<PropertyValue Property="ValueListProperty" String="EksikDisis"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="EksikDisisT"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="Metadata.Detail/ModelNo">
+				<Annotation Term="Common.Label" String="{@i18n&gt;modelNumber}"/>
+				<Annotation Term="Common.ValueList">
+					<Record Type="Common.ValueListType">
+						<PropertyValue Property="CollectionPath" String="ModelVHSet"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="Common.ValueListParameterInOut">
+									<PropertyValue Property="ValueListProperty" String="Model"/>
+									<PropertyValue Property="LocalDataProperty" PropertyPath="ModelNo"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="ModelAdi"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="OlusKisi"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="OlusKisiAdSoyad"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="OlusTarih"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="OnayDurum"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="OnayDurumTxt"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="Zzaltrenk"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="Zzaltrenkt"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="Zzgiysigrubu"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="Zzgiysigrubut"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="Zzkcins"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="Zzkcinst"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="Zzsezon"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="Zzsrenk"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="Zzsrenkt"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="Zzuruncinsi"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="Zzuruncinsid"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="Zzuruncinsidt"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="Zzuruncinsit"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="Metadata.Detail/Musteri">
+				<Annotation Term="Common.Label" String="{@i18n&gt;customer}"/>
+				<Annotation Term="Common.ValueList">
+					<Record Type="Common.ValueListType">
+						<PropertyValue Property="CollectionPath" String="CustomerVHSet"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="Common.ValueListParameterInOut">
+									<PropertyValue Property="ValueListProperty" String="Kunnr"/>
+									<PropertyValue Property="LocalDataProperty" PropertyPath="Musteri"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="Land1"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="Name1"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="Name2"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="Metadata.Detail/NumuneDurumu">
+				<Annotation Term="Common.Label" String="{@i18n&gt;sampleStatu}"/>
+				<Annotation Term="Common.ValueList">
+					<Record Type="Common.ValueListType">
+						<PropertyValue Property="CollectionPath" String="SampleStatuVHSet"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="Common.ValueListParameterInOut">
+									<PropertyValue Property="ValueListProperty" String="Statu"/>
+									<PropertyValue Property="LocalDataProperty" PropertyPath="NumuneDurumu"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="StatuT"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="Metadata.Detail/TalepTarihi">
+				<Annotation Term="Common.Label" String="{@i18n&gt;requestDate}"/>
+			</Annotations>
+			<Annotations Target="Metadata.Detail/Varyant">
+				<Annotation Term="Common.Label" String="{@i18n&gt;variant}"/>
+				<Annotation Term="Common.ValueList">
+					<Record Type="Common.ValueListType">
+						<PropertyValue Property="CollectionPath" String="VariantVHSet"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="Common.ValueListParameterInOut">
+									<PropertyValue Property="ValueListProperty" String="Varyant"/>
+									<PropertyValue Property="LocalDataProperty" PropertyPath="Varyant"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="VaryantT"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="Metadata.CauseVH/EksikDisis">
+				<Annotation Term="Common.Text" Path="EksikDisisT"/>
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
